@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    justify-content: center;
+    align-content: center;
+}
+
+.card-list {
+    display: flex;
+    width: 100vw;
+    padding: 5vh 5vw;
+}
+
+.card {
+    width: 30vw;
+    height: 20vh;
+    box-shadow: 0px 4px 12px #00000029;
+    border-radius: 10px;
+    margin: 0vh 2.5vw 0vh 2.5vw;
+    color: #FFFFFF;
+    padding: 5vh 2vw;
+}
+
+.card h1 {
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 52px;
+}
+
+.card hr {
+    margin-top: 3vh;
+    height: 2px;
+    border: 1px solid #FFFFFF;
+}
+
+.card p {
+    margin: 1vh 0vw;
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 28px;
+}
+
+.blue {
+    background: transparent linear-gradient(180deg, #3A7BD5 0%, #00D2FF 100%) 0% 0% no-repeat padding-box;
+}
+
+.red {
+    background: transparent linear-gradient(180deg, #F857A6 0%, #EE8787 100%) 0% 0% no-repeat padding-box;
+}
+
+.green {
+    background: transparent linear-gradient(180deg, #1CD8D2 0%, #26DA98 100%) 0% 0% no-repeat padding-box;
+}

@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 10vh;
+    background: transparent linear-gradient(90deg, #43CEA2 0%, #2F7EA5 50%, #185A9D 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 12px #00000029;
+    opacity: 1;
+    padding: 2vh 1vw;
+}
+
+header .user-data {
+    display: flex;
+    float: right;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+header .user-data .text {
+    display: block;
+    padding: 1vh 1vw;
+}
+
+header .user-data .text h3 {
+    font-family: 'OpenSans-Light', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 0.7em;
+}
+
+header .user-data .text p {
+    font-family: 'OpenSans-Light', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 0.7em;
+    float: right;
+}
+
+header .user-data .icon .fa-user-circle {
+    font-size: 6vh;
+    color: #FFFFFF;
+}
+
+header .user-data .icon .fa-caret-down {
+    font-size: 2.5vh;
+    padding: 2vh 0.5vw;
+    color: #FFFFFF;
+    cursor: pointer;
+}

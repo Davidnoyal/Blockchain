@@ -1,0 +1,12 @@
+<div class="wrapper container-fluid">
+    <div class="body">
+        <div class="form">
+            <h2>Login</h2>
+            <div class="input">
+                <input type="text" name="username" id="username" [(ngModel)]="username" placeholder="Username" required/>
+                <input type="password" name="password" id="password" [(ngModel)]="password" placeholder="Password" required/>
+                <button type="submit" name="submit" (click)="login()" [disabled]="formValidate()" [style.cursor]="formValidate() ? 'not-allowed' : 'pointer'">LOGIN</button>
+            </div>
+        </div>
+    </div>
+</div>

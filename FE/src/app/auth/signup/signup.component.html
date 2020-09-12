@@ -1,0 +1,24 @@
+<div class="wrapper container-fluid">
+    <div class="body">
+        <div class="form">
+            <h2>Create an account</h2>
+            <div class="inputBox">
+                <div class="input">
+                    <input id="username" type="text" name="username" [(ngModel)]="username" placeholder="Username" required />
+                    <input id="email" type="email" name="email" [(ngModel)]="email" placeholder="Email" required />
+                </div>
+                <div class="input">
+                    <input id="password" type="password" name="password" [(ngModel)]="password" placeholder="Password" required />
+                    <input id="contact" type="text" name="contact" [(ngModel)]="contact" placeholder="Contact Number" onkeypress=" return event.charCode >= 48 && event.charCode <= 57 " required />
+                </div>
+                <div class="input">
+                    <input id="confPass" type="password" name="confpassword" [(ngModel)]="confpassword" placeholder="Confirm Password" required />
+                    <input id="location" type="text" name="location" [(ngModel)]="location" placeholder="Location" required />
+                </div>
+            </div>
+            <div class="inputBox">
+                <button type="submit" name="submit" (click)="signup()" [disabled]="formValidate()" [style.cursor]="formValidate() ? 'not-allowed' : 'pointer'">Create Account</button>
+            </div>
+        </div>
+    </div>
+</div>

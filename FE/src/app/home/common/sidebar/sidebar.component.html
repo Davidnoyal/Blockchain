@@ -1,0 +1,32 @@
+<div class="body">
+    <app-header></app-header>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <header>
+        <h3>Dashboard</h3>
+    </header>
+    <div id="sidebarMenu">
+        <div class="usertab">
+            <div class="icon">
+                <img src="../../../../assets/images/man.png" />
+            </div>
+            <div class="text">
+                <h3>John Doe</h3>
+                <p>Manager</p>
+            </div>
+        </div>
+        <ul class="sidebarMenuInner">
+            <li class="active"><a routerLink="#">Dashboard</a></li>
+            <li><a routerLink="#">Batches</a></li>
+            <li><a routerLink="#">Products</a></li>
+            <li><a routerLink="#">Track Shipment</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>
