@@ -5,21 +5,21 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { SidebarComponent } from './home/common/sidebar/sidebar.component';
 import { ProductsComponent } from './home/products/products.component';
-import { BatchesComponent } from './home/batches/batches.component';
 import { TrackShipmentComponent } from './home/track-shipment/track-shipment.component';
-
+import { AuthenticationGuard } from './auth/guard/authentication.guard';
 const routes: Routes = [
-  { path: '', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   {
-    path: 'dashboard', component: SidebarComponent,
+    path: 'dashboard', component: SidebarComponent, canActivate: [AuthenticationGuard],
     children: [
-      { path: '', component: DashboardComponent },
+      { path: '', component: DashboardComponent},
       { path: 'products', component: ProductsComponent },
-      { path: 'batches', component: BatchesComponent },
       { path: 'track', component: TrackShipmentComponent },
     ]
-  }
+  },
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({

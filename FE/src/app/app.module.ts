@@ -9,10 +9,14 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './home/common/header/header.component';
 import { SidebarComponent } from './home/common/sidebar/sidebar.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
-import { BatchesComponent } from './home/batches/batches.component';
 import { ProductsComponent } from './home/products/products.component';
 import { TrackShipmentComponent } from './home/track-shipment/track-shipment.component';
+import { AuthGuardService } from './auth/service/auth-guard.service';
+
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,18 +25,20 @@ import { MatExpansionModule } from '@angular/material/expansion';
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    BatchesComponent,
     ProductsComponent,
-    TrackShipmentComponent
+    TrackShipmentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatRadioModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

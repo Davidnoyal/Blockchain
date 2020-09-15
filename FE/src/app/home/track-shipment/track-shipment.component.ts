@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./track-shipment.component.css']
 })
 export class TrackShipmentComponent implements OnInit {
-
+  productCode: any;
   constructor() { }
 
   ngOnInit(): void {

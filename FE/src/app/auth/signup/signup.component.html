@@ -13,7 +13,10 @@
                 </div>
                 <div class="input">
                     <input id="confPass" type="password" name="confpassword" [(ngModel)]="confpassword" placeholder="Confirm Password" required />
-                    <input id="location" type="text" name="location" [(ngModel)]="location" placeholder="Location" required />
+                    <input id="location" list="locations" name="location" [(ngModel)]="location" placeholder="Location" required />
+                    <datalist id="locations">
+                        <option *ngFor="let item of locationList" [attr.value]=item>
+                    </datalist>
                 </div>
             </div>
             <div class="inputBox">

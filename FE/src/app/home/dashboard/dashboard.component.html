@@ -17,7 +17,54 @@
         </div>
     </div>
     <div class="table">
-        <div class="title"></div>
-        <div class="body"></div>
+        <h3>Recently Added</h3>
+        <mat-accordion>
+            <mat-expansion-panel [@.disabled]="true" class="header">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        ID
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        Product Name
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        Product Code
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        Quantity (in Kg)
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        Status
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+            <mat-expansion-panel *ngFor="let item of recentArray">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{item.id}}
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        {{item.productName}}
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        {{item.productCode}}
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        {{item.quantity}}
+                    </mat-panel-title>
+                    <mat-panel-title>
+                        {{item.status}}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="content">
+                    <h4>Last Updated</h4>
+                    <div class="innerTable">
+                        <p>Time : {{item.time}}</p>
+                        <p>Location : {{item.location}}</p>
+                        <p class="track">Track Shipment</p>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
 </div>

@@ -5,6 +5,7 @@
 }
 
 .body {
+    margin-top: 10vh;
     justify-content: center;
     align-content: center;
 }
@@ -27,11 +28,11 @@
 
 .card h1 {
     font-family: 'OpenSans-Bold', sans-serif;
-    font-size: 52px;
+    font-size: 2rem;
 }
 
 .card hr {
-    margin-top: 3vh;
+    margin-top: 2.5vh;
     height: 2px;
     border: 1px solid #FFFFFF;
 }
@@ -39,11 +40,11 @@
 .card p {
     margin: 1vh 0vw;
     font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 28px;
+    font-size: 1rem;
 }
 
 .blue {
-    background: transparent linear-gradient(180deg, #3A7BD5 0%, #00D2FF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(360deg, #3A7BD5 0%, #00D2FF 100%) 0% 0% no-repeat padding-box;
 }
 
 .red {
@@ -52,4 +53,55 @@
 
 .green {
     background: transparent linear-gradient(180deg, #1CD8D2 0%, #26DA98 100%) 0% 0% no-repeat padding-box;
+}
+
+.table,
+.mat-accordion {
+    width: 100vw;
+    padding: 5vh 5vw;
+}
+
+.mat-accordion .mat-expansion-panel:first-child .mat-expansion-panel-header-title {
+    font-size: 1.15rem;
+    height: 4vh;
+    margin: 2vh 0vw 0vh 0vw;
+}
+
+.mat-expansion-panel {
+    margin: 0vh 0vw 0.5vh 0vw;
+}
+
+.header {
+    cursor: not-allowed;
+    pointer-events: none;
+    font-family: 'OpenSans-SemiBold', sans-serif;
+}
+
+::ng-deep .header .mat-expansion-indicator:after {
+    opacity: 0;
+}
+
+::ng-deep .mat-expansion-panel-header-title {
+    width: 10vh !important;
+    text-align: center;
+    float: center;
+    font-size: 1rem;
+    font-family: 'OpenSans-Regular'sans-serif;
+}
+
+.innerTable {
+    display: flex;
+    width: 100%;
+}
+
+.innerTable p {
+    width: 33%;
+}
+
+.innerTable .track {
+    color: #622EBD;
+    float: right;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
 }

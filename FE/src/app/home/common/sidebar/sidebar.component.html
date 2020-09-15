@@ -7,7 +7,7 @@
         <div class="spinner diagonal part-2"></div>
     </label>
     <header>
-        <h3>Dashboard</h3>
+        <h3>{{getTitle()}}</h3>
     </header>
     <div id="sidebarMenu">
         <div class="usertab">
@@ -20,10 +20,9 @@
             </div>
         </div>
         <ul class="sidebarMenuInner">
-            <li class="active"><a routerLink="#">Dashboard</a></li>
-            <li><a routerLink="#">Batches</a></li>
-            <li><a routerLink="#">Products</a></li>
-            <li><a routerLink="#">Track Shipment</a></li>
+            <li (click)="clicked('dashboard')" id="dashboard"><a routerLink="/dashboard">Dashboard</a></li>
+            <li (click)="clicked('products')" id="products"><a routerLink="/dashboard/products">Products</a></li>
+            <li (click)="clicked('track')" id="track"><a routerLink="/dashboard/track">Track Shipment</a></li>
         </ul>
     </div>
     <div class="main">
