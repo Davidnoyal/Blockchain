@@ -15,7 +15,7 @@ export class LogoutPopupComponent implements OnInit {
   ngOnInit(): void {
   }
   logout(): void {
-    localStorage.clear();
+    sessionStorage.clear();
     this.router.navigate(['']);
   }
 }

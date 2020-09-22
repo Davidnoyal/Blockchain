@@ -10,8 +10,8 @@ import { AuthenticationGuard } from './auth/guard/authentication.guard';
 import { TrackProductComponent } from './home/track-product/track-product.component';
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'dashboard', component: SidebarComponent, canActivate: [AuthenticationGuard],
     children: [

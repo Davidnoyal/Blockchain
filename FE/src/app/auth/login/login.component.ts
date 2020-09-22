@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     console.log('Login');
-    localStorage.setItem('session', 'loggedIn');
+    sessionStorage.setItem('session', 'loggedIn');
     this.router.navigate(['/signup']);
   }
 
