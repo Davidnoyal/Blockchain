@@ -4,14 +4,20 @@
             <h2>Create an account</h2>
             <div class="inputBox">
                 <div class="input">
+                    <input id="firstname" type="text" name="firstname" [(ngModel)]="firstname" placeholder="Firstname" required />
                     <input id="username" type="text" name="username" [(ngModel)]="username" placeholder="Username" required />
                     <input id="email" type="email" name="email" [(ngModel)]="email" placeholder="Email" required />
                 </div>
                 <div class="input">
+                    <input id="lastname" type="text" name="lastname" [(ngModel)]="lastname" placeholder="Lastname" required />
                     <input id="password" type="password" name="password" [(ngModel)]="password" placeholder="Password" required />
                     <input id="contact" type="text" name="contact" [(ngModel)]="contact" placeholder="Contact Number" onkeypress=" return event.charCode >= 48 && event.charCode <= 57 " required />
                 </div>
                 <div class="input">
+                    <input id="role" list="roles" name="role" [(ngModel)]="role" placeholder="Role" required />
+                    <datalist id="roles">
+                        <option *ngFor="let item of roles" [attr.value]=item>
+                    </datalist>
                     <input id="confPass" type="password" name="confpassword" [(ngModel)]="confpassword" placeholder="Confirm Password" required />
                     <input id="location" list="locations" name="location" [(ngModel)]="location" placeholder="Location" required />
                     <datalist id="locations">

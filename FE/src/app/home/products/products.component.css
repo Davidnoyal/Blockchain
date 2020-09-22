@@ -19,6 +19,24 @@
     width: 100%;
 }
 
+.mat-header-cell,
+td,
+.mat-paginator {
+    text-align: center;
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 1rem;
+}
+
+.mat-paginator {
+    font-size: 0.825rem;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #185A9D;
+}
+
 button {
     color: #FFFFFF;
     background: #185A9D;

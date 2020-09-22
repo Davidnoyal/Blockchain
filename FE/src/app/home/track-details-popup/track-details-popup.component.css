@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    justify-content: center;
+    align-content: center;
+    padding: 3vh 2vw;
+}
+
+.notification {
+    display: block;
+    width: 100%;
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 1.4rem;
+}
+
+.notification p {
+    padding: 1.5vh 1vw;
+}
+
+.notification span {
+    color: #999;
+    font-family: 'OpenSans-Italic', sans-serif;
+    font-size: 1.25rem;
+}

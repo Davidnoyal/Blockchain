@@ -7,6 +7,7 @@ import { SidebarComponent } from './home/common/sidebar/sidebar.component';
 import { ProductsComponent } from './home/products/products.component';
 import { TrackShipmentComponent } from './home/track-shipment/track-shipment.component';
 import { AuthenticationGuard } from './auth/guard/authentication.guard';
+import { TrackProductComponent } from './home/track-product/track-product.component';
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: '', component: DashboardComponent},
       { path: 'products', component: ProductsComponent },
       { path: 'track', component: TrackShipmentComponent },
+      { path: 'trackProduct', component: TrackProductComponent },
     ]
   },
   { path: '**', redirectTo: '/login', pathMatch: 'full' }

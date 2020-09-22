@@ -1,0 +1,45 @@
+<div class="body">
+    <h1>#{{product.id}} {{product.productName}}</h1>
+    <div class="progressBar">
+        <ul class="progress-bar">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="progressBarText">
+        <ul class="progress-bar-text">
+            <li>Collected from Fishermen</li>
+            <li>Processing</li>
+            <li>Packing</li>
+            <li>Transporting</li>
+            <li>Delivered to Customer</li>
+        </ul>
+    </div>
+    <div class="productData">
+        <div class="left">
+            <table>
+                <tr>
+                    <th>Product Name :</th>
+                    <td>{{product.productName}}</td>
+                    <th>Product Code :</th>
+                    <td>{{product.productCode}}</td>
+                </tr>
+                <tr>
+                    <th>Quantity ( in Kilograms ) :</th>
+                    <td>{{product.quantity}}</td>
+                    <th>Current Status :</th>
+                    <td style="color: red;">{{product.status}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a (click)="updateDialog()" style="cursor: pointer;">View Detailed Updates</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <qrcode [qrdata]="product.productCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+    </div>
+</div>

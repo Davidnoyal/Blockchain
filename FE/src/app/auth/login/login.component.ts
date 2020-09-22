@@ -23,6 +23,13 @@ export class LoginComponent implements OnInit {
   }
 
   formValidate(): boolean {
-    return false;
+    if (
+      (this.username === '' || this.username === undefined) ||
+      (this.password === '' || this.password === undefined)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

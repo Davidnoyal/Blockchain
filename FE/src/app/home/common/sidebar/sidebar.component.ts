@@ -10,13 +10,24 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $('#dashboard').addClass('active');
-    localStorage.setItem('header', 'Dashboard');
+    this.setHeader();
+    $('#openSidebarMenu').prop('checked', false);
   }
 
   getTitle(): any {
     return localStorage.getItem('header');
   }
+
+  setHeader(): void {
+    if (localStorage.getItem('header') != null && localStorage.getItem('header') !== undefined) {
+      if (localStorage.getItem('header') === 'Track Shipment') {
+        this.clicked('track');
+      } else {
+        this.clicked(localStorage.getItem('header'));
+      }
+    }
+  }
+
   clicked(id): any {
     if (id === 'track') {
       localStorage.setItem('header', 'Track Shipment');

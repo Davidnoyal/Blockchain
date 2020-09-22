@@ -61,7 +61,7 @@
                     <div class="innerTable">
                         <p>Time : {{item.time}}</p>
                         <p>Location : {{item.location}}</p>
-                        <p class="track">Track Shipment</p>
+                        <p class="track" (click)="track(item.productCode)">Track Shipment</p>
                     </div>
                 </div>
             </mat-expansion-panel>

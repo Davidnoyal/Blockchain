@@ -31,14 +31,14 @@ header .user-data .text {
 
 header .user-data .text h3 {
     font-family: 'OpenSans-Light', sans-serif;
-    font-size: 24px;
+    font-size: 1.25rem;
     color: #FFFFFF;
     line-height: 0.5em;
 }
 
 header .user-data .text p {
     font-family: 'OpenSans-Light', sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     color: #FFFFFF;
     line-height: 0.5em;
     float: right;

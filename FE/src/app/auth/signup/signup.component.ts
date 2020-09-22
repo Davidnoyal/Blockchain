@@ -13,6 +13,13 @@ export class SignupComponent implements OnInit {
   email: any;
   password: any;
   confpassword: any;
+  firstname: any;
+  lastname: any;
+  role: any;
+  roles: any = [
+    'Store Keeper',
+    'Processing Unit Manager',
+  ];
   location: any;
   locationList: any = [
     'Annesbrook',
@@ -51,6 +58,20 @@ export class SignupComponent implements OnInit {
   }
 
   formValidate(): boolean {
-    return false;
+    if (
+      (this.firstname === '' || this.firstname === undefined) ||
+      (this.lastname === '' || this.lastname === undefined) ||
+      (this.username === '' || this.username === undefined) ||
+      (this.email === '' || this.email === undefined) ||
+      (this.contact === '' || this.contact === undefined) ||
+      (this.password === '' || this.password === undefined) ||
+      (this.confpassword === '' || this.confpassword === undefined) ||
+      (this.role === '' || this.role === undefined)
+
+    ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

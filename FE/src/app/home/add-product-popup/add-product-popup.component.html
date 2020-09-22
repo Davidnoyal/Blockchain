@@ -1,0 +1,28 @@
+<div class="body">
+    <h2>Add Product</h2>
+    <div class="form">
+        <div class="inputBoxGroup">
+            <div class="inputBox">
+                <label for="product">Product</label><br />
+                <select name="product" [(ngModel)]="product" id="product" required>
+                    <option *ngFor="let item of productArray">{{item}}</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <label for="productCode">Product Code</label><br />
+                <input type="text" name="productCode" [(ngModel)]="productCode" id="productCode" required />
+            </div>
+        </div>
+        <div class="inputBoxGroup">
+            <div class="inputBox">
+                <label for="quantity">Quantity</label><br />
+                <input type="text" name="quantity" [(ngModel)]="quantity" id="quantity" required onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
+            </div>
+            <div class="inputBox button">
+                <br />
+                <button (click)="addProduct()" [disabled]="formValidate()" [style.cursor]="formValidate() ? 'not-allowed' : 'pointer'">Submit</button>
+                <button [mat-dialog-close]>Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
